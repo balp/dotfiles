@@ -1,48 +1,35 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-let mapleader=","
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-map Q gq
-set sw=4
-set ts=4
-set expandtab
-set cindent
-
-set noswapfile
-set nobackup
-set nowb
-set autowrite
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.git'
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'bling/vim-airline'
-Bundle 'molokai'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'bling/vim-airline'
+Plugin 'molokai'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'msanders/snipmate.vim'
-Bundle 'mfukar/robotframework-vim'
-Bundle 'tpope/vim-eunuch'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'msanders/snipmate.vim'
+Plugin 'mfukar/robotframework-vim'
+Plugin 'tpope/vim-eunuch'
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 " ...
 " Track the engine.
-Bundle 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
-Bundle 'honza/vim-snippets'
+Plugin 'honza/vim-snippets'
 
 Plugin 'Valloric/YouCompleteMe'
 " Need installation, install cmake, e.g.
@@ -55,17 +42,31 @@ Plugin 'Valloric/YouCompleteMe'
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-
-filetype plugin indent on     " required! 
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" Put your non-Plugin stuff after this line
+
+map Q gq
+set sw=4
+set ts=8
+set expandtab
+set cindent
+
+set noswapfile
+set nobackup
+set nowb
+set autowrite
 
 set laststatus=2
 if has("gui_macvim")
