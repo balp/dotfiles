@@ -12,3 +12,7 @@ Install plugin in vim start vim and run:
 
     :PluginInstall
 
+ Install the compiler parts of YouCompleteMe
+
+    (cd ~/.vim/bundle/YouCompleteMe ; ./install.sh --clang-completer)
+

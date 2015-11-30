@@ -1,3 +1,4 @@
 
 # Vundle will handle the modules in here
 vim/bundle/*
+vim/.netrwhist

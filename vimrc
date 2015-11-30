@@ -22,6 +22,7 @@ Plugin 'jnwhiteh/vim-golang'
 Plugin 'msanders/snipmate.vim'
 Plugin 'mfukar/robotframework-vim'
 Plugin 'tpope/vim-eunuch'
+Plugin 'fatih/vim-go'
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 " ...
@@ -31,16 +32,13 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 " Need installation, install cmake, e.g.
 "   brew install cmake
 " Then:
 "   (cd ~/.vim/bundle/YouCompleteMe ; ./install.sh --clang-completer)
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"Plugin 'file:///Users/andersar/Documents/code/vim-python-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,6 +54,11 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 map Q gq
 set sw=4
