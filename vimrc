@@ -32,6 +32,12 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'garbas/vim-snipmate'
 
+" Elang support for Class
+Plugin 'vim-erlang/vim-erlang-runtime'
+Plugin 'vim-erlang/vim-erlang-compiler'
+Plugin 'vim-erlang/vim-erlang-omnicomplete'
+Plugin 'vim-erlang/vim-erlang-tags'
+
 " Plugin 'Valloric/YouCompleteMe'
 " Need installation, install cmake, e.g.
 "   brew install cmake
