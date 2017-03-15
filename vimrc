@@ -23,6 +23,7 @@ Plugin 'msanders/snipmate.vim'
 Plugin 'mfukar/robotframework-vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'fatih/vim-go'
+Plugin 'ekalinin/Dockerfile.vim'
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 " ...
