@@ -17,4 +17,4 @@ if [[ ! -e ~/.config/i3/config ]] ; then
   ln -s ${DIR}/i3_config ~/.config/i3/config
 fi
 
-
+git config --global alias.lg "log --graph --pretty=format:'%C(yellow)%d%Creset %C(cyan)%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --all"
