@@ -36,6 +36,7 @@ status.register("runwatch",
 # Note: the network module requires PyPI package netifaces
 status.register("network",
     interface="eno1",
+    next_if_down=True,
     format_up="{v4cidr} r{network_graph_recv} s{network_graph_sent}",)
 
 status.register('net_speed',

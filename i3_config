@@ -57,10 +57,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+# bindsym $mod+Shift+j move left
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+l move up
+# bindsym $mod+Shift+odiaeresis move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -173,5 +173,9 @@ bindsym XF86AudioStop exec mpc stop
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc perv
 
+bindsym $mod+l exec "~/.local/bin/fuzzy_lock.sh"
+exec xautolock -time 15 -locker '~/.local/bin/fuzzy_lock.sh' &
+
 exec --no-startup-id mpd --no-daemon
 exec --no-startup-id pasystray
+exec --no-startup-id nm-applet
