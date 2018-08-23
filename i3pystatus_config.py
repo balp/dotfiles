@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from i3pystatus import Status
+import netifaces
 
 status = Status()
 
@@ -27,17 +28,21 @@ status.register("runwatch",
     name="DHCP",
     path="/var/run/dhclient*.pid",)
 
-# Shows the address and up/down state of eth0. If it is up the address is shown in
-# green (the default value of color_up) and the CIDR-address is shown
-# (i.e. 10.10.10.42/24).
+# Shows the address and up/down state of some interfaces. If it is up the address is shown in
+# green (the default value of color_up) and the ipv4-address is shown
+# (i.e. 10.10.10.42).
 # If it's down just the interface name (eth0) will be displayed in red
 # (defaults of format_down and color_down)
 #
 # Note: the network module requires PyPI package netifaces
-status.register("network",
-    interface="eno1",
-    next_if_down=True,
-    format_up="{v4cidr} r{network_graph_recv} s{network_graph_sent}",)
+
+ifaces = netifaces.interfaces()
+for iface in ["eno1", "enp0s31f6", "wlp2s0"]:
+    if iface in ifaces:
+        status.register("network",
+            interface=iface,
+            next_if_down=False,
+            format_up="{interface} {v4} {network_graph_recv}/{network_graph_sent}",)
 
 status.register('net_speed',
   format='↓{speed_down:.1f}{down_units} ↑{speed_up:.1f}{up_units}'
